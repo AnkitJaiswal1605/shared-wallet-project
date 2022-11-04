@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calyptus</title>
+    <script src="index.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
+</head>
+<body>
+    <button onclick="connect()">Connect Wallet</button>
+    <p id="wallet-address"></p>
+    <h4>Pending Allowance : <span id="pending-allowance"></span></h4>
+    <form onsubmit="spendCoins()" autoComplete="off">
+        <input type="text" placeholder="Enter Receiver Address..."><br><br>
+        <input type="number" placeholder="Enter Amount..."><br><br>
+        <button>SEND</button><br><br>   
+    </form>
+
+    <hr>
+
+    <h3>For Admin Use Only</h3>
+    <h4>Wallet Balance : <span id="wallet-balance"></span></h4>
+    <form onsubmit="renewAllowance()" autoComplete="off">
+        <input type="text" id="user" placeholder="Enter User Address..."><br><br>
+        <input type="number" id="allowance" placeholder="Enter Allowance..."><br><br>
+        <input type="submit" value="SET">
+    </form>
+</body>
+</html>
